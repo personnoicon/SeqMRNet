@@ -253,8 +253,8 @@ def run(args):
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-t', '--task', type=str, required=True,
-                        choices=['abnormal', 'acl', 'meniscus'])
+    parser.add_argument('-t', '--task', type=str, default=abnormal,
+                        choices=['abnormal'])
     parser.add_argument('-p', '--plane', type=str, required=True,
                         choices=['sagittal', 'coronal', 'axial'])
     parser.add_argument('--prefix_name', type=str, required=True)
